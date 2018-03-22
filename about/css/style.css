@@ -1,0 +1,736 @@
+/*-------------------------------------------*/
+/*------------------GENERAL------------------*/
+/*-------------------------------------------*/
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'robotoregular', arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  color: #65686E;
+}
+.wrapper {
+  width: 80%;
+  margin: auto;
+  height: inherit;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: inherit;
+  color: inherit;
+  margin: 0;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 2.3em;
+  color: black;
+  background-color: inherit;
+}
+h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+h4 {
+  margin-bottom: 10px;
+}
+strong {
+  font-weight: bolder;
+  color: #5CADD3;
+  background-color: transparent;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/*-------------------------------------------*/
+/*------------------HEADER-------------------*/
+/*-------------------------------------------*/
+
+header {
+  position: fixed; /*l'entete reste collée en haut de l'écran*/
+  height: 100px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  color: inherit;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+}
+.entete {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+nav input {
+  display: none;
+}
+
+.hamburger span  {
+  display: none;
+}
+
+nav li {
+  padding: 0 15px;
+  display: inline;
+}
+nav li:hover {
+  border-top: 4px #5CADD3 solid;
+  padding-top: 37px;
+}
+nav a {
+  background-color: inherit;
+  color: #65686E;
+  font-size: 1.1em;
+}
+
+/*-------------------------------------------*/
+/*-------------------SLIDER------------------*/
+/*-------------------------------------------*/
+
+.banniere_small {
+  display: none;
+}
+.banniere_xsmall {
+  display: none;
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 100px;
+}
+.slider figure {
+  position: relative;
+  width: 300%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  left: 0;
+  text-align: left;
+  animation: 10s animSlider infinite;
+}
+.slider figure img {
+  width: 33.33%;
+  height: auto;
+  float: left;
+}
+@keyframes animSlider {
+  0% { left: 0%; }
+  45% { left: 0%; }
+  50% { left: -100%; }
+  95% { left: -100%; }
+  100% { left: -200%; }
+}
+/* .slider figure:hover {
+  animation-play-state: paused;
+} */
+.slider_decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title_blue {
+    color: #5CADD3;
+    background-color: inherit;
+}
+.main_title {
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    background-color: inherit;
+}
+.main_title:nth-child(2) {
+  flex: 2;
+  margin-left: 9%;
+}
+.main_title p {
+  margin: 0 0 30px 0;
+}
+
+.button_info {
+    background-color: #5CADD3;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom-style: solid;
+    border-color: #4494BB;
+}
+.button_info:hover {
+  background-color: #4494BB;
+  color: inherit;
+}
+
+.arrow_left {
+    color: white;
+    padding: 15px 15px 15px 0;
+    background-color: gray;
+    border-radius: 0 45px 45px 0;
+}
+.arrow_right {
+    color: white;
+    padding: 15px 0 15px 15px;
+    background-color: gray;
+    border-radius: 45px 0 0 45px;
+}
+
+/*-------------------------------------------*/
+/*-----------------TITRE h2------------------*/
+/*-------------------------------------------*/
+
+.section_title {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+.fa-circle {
+  background-color: inherit;
+    color: #5CADD3;
+    padding: 5px;
+}
+.title_underline {
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    position: relative;
+    bottom: 5px;
+    background-color: #E5E5E5;
+    color: inherit;
+}
+
+#service::before,
+#projet::before {
+    content: "";
+    display: block;
+    height: 80px;
+    margin: -80px 0 0;
+}
+
+/*-------------------------------------------*/
+/*-------------SECTION SERVICE---------------*/
+/*-------------------------------------------*/
+
+.service {
+    margin: 100px 0 50px 0;
+}
+.service_content {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+.service_image {
+    text-align: center;
+}
+.service_description {
+    position: relative;
+}
+.service_description li {
+    display: flex;
+    align-items: center;
+}
+.service_description p {
+  text-align: justify;
+}
+.service_description .fa-circle {
+  position: absolute;
+  padding: 5px;
+  color: #5CADD3;
+  background-color: white;
+  border-radius: 50px;
+  left: 50px
+}
+.service_ico {
+    display: flex;
+    justify-content: center;
+    min-height: 64px;
+    min-width: 64px;
+    border: solid 1px #E5E5E5;
+    border-radius: 32PX;
+    margin-right: 25px;
+    color: #5CADD3;
+    background-color: inherit;
+    align-items: center;
+}
+.service_description_text {
+  margin-left: 20px;
+}
+
+/*-------------------------------------------*/
+/*--------------SECTION PROJET---------------*/
+/*-------------------------------------------*/
+
+.projet {
+background-color: #f5f5f5;
+color: inherit;
+}
+
+.projet_menu ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
+  width: 40%;
+  min-width: 500px;
+  padding-left: 0;
+  color: inherit;
+  background-color: #e5e5e5;
+  border-radius: 5px;
+}
+.projet_menu .fa-caret-down {
+  color: #4494BB;
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  left: 45%;
+}
+.projet_button {
+  padding: 10px;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+.projet_button i {
+  display: none;
+}
+.projet_button:hover {
+  cursor: pointer;
+  z-index: 5;
+}
+.projet_button:hover i {
+  display: inline;
+}
+.projet_menu li:hover {
+  background-color: #5CADD3;
+  color: inherit;
+  border-radius: 5px;
+  border-bottom-style: solid;
+  border-color: #4494BB;
+}
+.projet_menu li:hover a {
+  background-color: inherit;
+  color: white;
+}
+.projet_menu a:hover {
+  background-color: inherit;
+  color: white;
+}
+.projet_menu a {
+  background-color: inherit;
+  color: #65686E;
+}
+.selected {
+  background-color: #5CADD3;
+  border-radius: 5px;
+  border-bottom-style: solid;
+  border-color: #4494BB;
+  color: white;
+}
+.selected .fa-caret-down {
+  display: inline;
+}
+.selected a {
+  background-color: inherit;
+  color: white;
+}
+
+.projet_portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+}
+.projet_portfolio figure {
+  position: relative;
+  width: 300px;
+  margin: 10px;
+  padding: 0;
+}
+.projet_portfolio img {
+  width: inherit;
+}
+.projet_portfolio figcaption {
+  display: none;
+}
+.projet_portfolio figure:hover {
+  z-index: 5;
+}
+.projet_portfolio figure:hover figcaption {
+  display: inline;
+  width: 300px;
+  min-height: 35%;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px 0 10px;
+}
+.projet_portfolio .fa-eye {
+  color: white;
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #5CADD3;
+  top: -20px;
+  right: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/*-------------------------------------------*/
+/*-------------------CONTACT-----------------*/
+/*-------------------------------------------*/
+
+iframe{
+  position: relative;
+  width: 100%;
+  height: 700px;
+  border: 0;
+}
+.blue_filter {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 700px;
+background-color: #5CADD3;
+color: inherit;
+opacity: 0.3;
+pointer-events: none;
+}
+
+.contact {
+  position: relative;
+}
+.formulaire {
+  position: absolute;
+  right: 10%;
+  top: 60px;
+  width: 360px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: inherit;
+  text-align: center;
+}
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  height: 530px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: inherit;
+  padding: 20px;
+}
+.adress {
+    background-color: transparent;
+    color: #65686E;
+    margin-top: 5px;
+}
+.underline_dot {
+    display: inline-block;
+    border-bottom-style: dotted;
+    border-bottom-color: #65686E;
+    border-bottom-width: 1px;
+}
+input {
+    width: 320px;
+    height: 32px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    padding-left: 10px;
+}
+textarea {
+    width: 320px;
+    height: 170px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+input[type=submit] {
+    background-color: #5CADD3;
+    color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+    border-style: none none solid none;
+    border-color: #4494BB;
+    width: auto;
+}
+input[type=submit]:hover {
+  background-color: #4494BB;
+  color: inherit;
+}
+
+/*-------------------------------------------*/
+/*-------------------FOOTER------------------*/
+/*-------------------------------------------*/
+
+footer {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  color: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-------------------------------------------*/
+/*----------------MEDIA QUERIES--------------*/
+/*-------------------------------------------*/
+
+/* image d'ordinateur au dessus des description */
+@media all and (max-width: 1279px) {
+  .service_content {
+    flex-direction: column;
+  }
+}
+
+/* Sur tous types d'écran, tablettes */
+@media all and (max-width: 991px)
+
+{
+  .wrapper {
+    width: 95%;
+  }
+
+  .logo {
+    margin-top: 20px;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  header {
+    position: relative;
+    height: 400px;
+    width: 100%;
+  }
+  .entete {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav li {
+    border: 5px #5CADD3 solid;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px 0;
+  }
+  nav li:hover {
+    background-color: #5CADD3;
+    padding: 10px 0;
+    border: 2px #5CADD3 inset;
+  }
+  nav a {
+    background-color: inherit;
+    color: #65686E;
+    font-size: 1.1em;
+    padding: 10px 300px;
+  }
+
+  .slider  {
+    display: none;
+  }
+
+  .banniere_small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .banniere_small img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  #service::before,
+  #projet::before {
+      display: none;
+  }
+
+  .service {
+    margin: 20px 0 10px 0;
+    padding-top: 10px;
+  }
+  .service_content {
+    padding-bottom: 0;
+    margin-top: 40px;
+  }
+  .service_image {
+    display: none;
+  }
+
+  .projet {
+    padding-top: 10px;
+  }
+  .projet_portfolio figure {
+    width: 100%;
+  }
+  .projet_portfolio figure:hover figcaption {
+    width: 100%;
+  }
+
+  .formulaire {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin: 20px 0;
+    width: 100%;
+  }
+}
+
+/* Sur tous types d'écran, smartphone */
+@media all and (max-width: 768px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .logo {
+      position: absolute;
+      top: 10px;
+      left: 5px;
+      margin-top: 0;
+  }
+
+  nav ul {
+    display: none;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+  nav li {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+  }
+  nav li:hover {
+    border: none;
+    padding: 10px 20px;
+    background-color: transparent;
+  }
+  nav a {
+    background-color: inherit;
+    color: white;
+    font-size: 1.1em;
+    padding: 0;
+  }
+
+  .burger_show {
+    display: none;
+  }
+  .burger_show:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    left: -45px;
+    width: auto;
+    background-color: #5CADD3;
+    border-radius: 5px;
+    z-index: 10;
+  }
+  .hamburger {
+  display: flex;
+  flex-direction: column;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  }
+  .hamburger span {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  position: relative;
+  background-color: #5CADD3;
+  color: inherit;
+  margin: 5px;
+  }
+
+  .banniere_small {
+    display: none;
+  }
+  .banniere_xsmall {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .banniere_xsmall img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .projet_menu ul {
+    width:100%;
+    min-width: 0;
+  }
+
+  iframe {
+    height: 400px;
+  }
+  .blue_filter {
+    height: 400px;
+  }
+}
+
+/* Résolution probleme positionnement fleche sous menu portfolio */
+@media all and (max-width: 500px) {
+  .projet_menu .fa-caret-down {
+    top: 56px;
+  }
+  .projet_button {
+    height: 70px;
+  }
+}
